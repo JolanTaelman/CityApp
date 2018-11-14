@@ -93,7 +93,7 @@ namespace ProjectCityApp.ViewModel
                            async () =>
                            {
                                var dialog = ServiceLocator.Current.GetInstance<IDialogService>();
-                               await dialog.ShowMessage("Hello Universal Application", "it works...");
+                               await dialog.ShowMessage("Hello Universal Application", "Jolan is goed bezig!");
                            }));
             }
         }
