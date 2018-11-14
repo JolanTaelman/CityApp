@@ -7,13 +7,13 @@ namespace CityAppBackend.Models
 {
     public class User
     {
-        public User(int userId, string name)
+        public User(Guid userId, string name)
         {
             UserId = userId;
             Name = name;
         }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public string Name { get; set; }
     
     }

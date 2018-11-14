@@ -7,13 +7,11 @@ namespace CityAppBackend.Models
 {
     public class Entrepreneur : User
     {
-        public string BusinessId { get; set; }
+        public Guid BusinessId { get; set; }
         
 
-        public Entrepreneur(int userId, string name) : base(userId, name)
+        public Entrepreneur(Guid userId, string name) : base(userId, name)
         {
         }
-
-
-    }
+     }
 }
