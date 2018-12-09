@@ -9,14 +9,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--NavigationView Content="NavigationView" HorizontalAlignment="Center" Height="1000" Margin="0,0,0,0" VerticalAlignment="Center" Width="1500" /-->
-    <Windows10FallCreatorsUpdate:NavigationView x:Name="navigationView">
+    <NavigationView x:Name="navigationView">
         <NavigationView.MenuItems>
-            <NavigationViewItem Icon="Admin" Content="Login" Tag="Login" />
+            <NavigationViewItem Icon="Admin" Content="Login"  Tag="Login" />
             <NavigationViewItem Icon="Pause" Content="Menu Item2" Tag="UserPage" />
         </NavigationView.MenuItems>
         <Frame x:Name="contentFrame"/>
-    </Windows10FallCreatorsUpdate:NavigationView>
-
-
+    </NavigationView>
 </Page>

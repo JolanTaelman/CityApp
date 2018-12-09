@@ -13,23 +13,18 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace CityAppFrontend
+namespace MvvmLight1
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class login : Page
     {
-        public MainPage()
+        public login()
         {
             this.InitializeComponent();
-        }
-
-        private void LoginNav_click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Login));
         }
     }
 }

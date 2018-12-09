@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="MvvmLight1.login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MvvmLight1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+        <TextBlock x:Name="lbl_Email" HorizontalAlignment="Center" Text="Email-Adres" TextWrapping="Wrap" VerticalAlignment="Center" Height="32" FontSize="20" Margin="10,0,0,0" Width="115"/>
+        <TextBox x:Name="in_email" Margin="0,0,0,0" HorizontalAlignment="Center" MinWidth="200" VerticalAlignment="Stretch"/>
+        <TextBlock x:Name="lbl_password" HorizontalAlignment="Center" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" FontSize="20" Margin="10,0,0,0"/>
+        <PasswordBox x:Name="in_password" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="200" Padding="10,3,6,5" Margin="0,0,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,20,0,0" MinWidth="170" VerticalAlignment="Stretch"/>
+    </StackPanel>
+</Page>
