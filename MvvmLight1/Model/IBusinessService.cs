@@ -2,9 +2,8 @@
 
 namespace MvvmLight1.Model
 {
-    public interface IDataService
+    internal interface IBusinessService
     {
-        Task<DataItem> GetData();
-
+        Task<Business> GetData();
     }
 }

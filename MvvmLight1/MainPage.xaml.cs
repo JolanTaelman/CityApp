@@ -61,7 +61,10 @@ namespace MvvmLight1
         {
             if (args.IsSettingsInvoked)
             {
-                ContentFrame.Navigate(typeof(MainPage));
+                var item = sender.MenuItems.OfType<NavigationViewItem>().First(x => (string)x.Content == (string)args.InvokedItem);
+                NavView_Navigate(item as NavigationViewItem);
+
+                // ContentFrame.Navigate(typeof(SettingsPage));
             }
             else
             {
@@ -77,6 +80,9 @@ namespace MvvmLight1
             {
                 case "Login":
                     ContentFrame.Navigate(typeof(login));
+                    break;
+                case "settings":
+                    ContentFrame.Navigate(typeof(SettingsPage));
                     break;
              
             }

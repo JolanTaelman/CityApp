@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CityAppBackend.Models
+namespace MvvmLight1.Model
 {
     public class User
     {
