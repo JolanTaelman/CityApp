@@ -60,11 +60,11 @@ namespace MvvmLight1
         private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
             if (args.IsSettingsInvoked)
-            {
+            {/*
                 var item = sender.MenuItems.OfType<NavigationViewItem>().First(x => (string)x.Content == (string)args.InvokedItem);
-                NavView_Navigate(item as NavigationViewItem);
+                NavView_Navigate(item as NavigationViewItem);*/
 
-                // ContentFrame.Navigate(typeof(SettingsPage));
+                 ContentFrame.Navigate(typeof(SettingsPage));
             }
             else
             {
