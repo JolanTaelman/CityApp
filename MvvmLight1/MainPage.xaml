@@ -20,14 +20,23 @@
                               Offset="1" />
             </LinearGradientBrush>
         </Grid.Background>
- <NavigationView x:Name="navigationView">
-        <NavigationView.MenuItems>
-            <NavigationViewItem Icon="Admin" Content="Login"  Tag="Login" />
-            <NavigationViewItem Icon="Pause" Content="Menu Item2" Tag="UserPage" />
-        </NavigationView.MenuItems>
-        <Frame x:Name="contentFrame"/>
-    </NavigationView>
-        <StackPanel Background="#FF1F1F1F"
+
+        <NavigationView x:Name="NavView" ItemInvoked="NavView_ItemInvoked" Loaded="NavView_Loaded">
+            
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Uid="LoginNavItem" Icon="Admin" Content="Login"  Tag="Login" />
+            </NavigationView.MenuItems>
+            
+            <Frame x:Name="ContentFrame">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition/>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </NavigationView>
+        
+        <!--StackPanel Background="#FF1F1F1F"
                     Width="300"
                     HorizontalAlignment="Center"
                     Height="450"
@@ -90,7 +99,7 @@
                        TextAlignment="Center"
                        Foreground="White"
                        Text="{Binding Clock}" />
-        </StackPanel>
+        </>-->
     </Grid>
 
 

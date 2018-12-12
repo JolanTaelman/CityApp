@@ -103,7 +103,6 @@
     <Compile Include="Model\Business.cs" />
     <Compile Include="Model\DataItem.cs" />
     <Compile Include="Model\DataService.cs" />
-    <Compile Include="Model\Entrepreneur.cs" />
     <Compile Include="Model\IDataService.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Views;
+using Microsoft.Practices.ServiceLocation;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,12 @@ namespace MvvmLight1
         public login()
         {
             this.InitializeComponent();
+        }
+
+        private void GoBackButtonClick(object sender, RoutedEventArgs e)
+        {
+            var nav = ServiceLocator.Current.GetInstance<INavigationService>();
+            nav.GoBack();
         }
     }
 }

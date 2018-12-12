@@ -24,6 +24,7 @@ namespace MvvmLight1.ViewModel
         private int _counter;
         private RelayCommand _incrementCommand;
         private RelayCommand<string> _navigateCommand;
+        private RelayCommand<string> _navigateLogin;
         private bool _runClock;
         private RelayCommand _sendMessageCommand;
         private RelayCommand _showDialogCommand;
@@ -62,6 +63,16 @@ namespace MvvmLight1.ViewModel
                        ?? (_navigateCommand = new RelayCommand<string>(
                            p => _navigationService.NavigateTo(ViewModelLocator.SecondPageKey, p),
                            p => !string.IsNullOrEmpty(p)));
+            }
+        }
+
+        public RelayCommand<string> NavigateLogin { 
+            get {
+                return _navigateLogin ?? (
+                    _navigateLogin = new RelayCommand<string>(
+
+                        p => _navigationService.NavigateTo(ViewModelLocator.loginKey, p),
+                        p => !string.IsNullOrEmpty(p)));
             }
         }
 

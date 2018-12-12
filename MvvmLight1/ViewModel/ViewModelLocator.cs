@@ -16,6 +16,8 @@ namespace MvvmLight1.ViewModel
     public class ViewModelLocator
     {
         public const string SecondPageKey = "SecondPage";
+        public const string loginKey = "login";
+
 
         /// <summary>
         /// This property can be used to force the application to run with design time data.
