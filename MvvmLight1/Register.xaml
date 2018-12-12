@@ -10,7 +10,7 @@
 
     <StackPanel>
         <TextBlock Text="New User" Style="{StaticResource TitleTextBlockStyle}"/>
-        <Button Height="100" Width="100" Background="LightGray" Content="Add photo" Margin="0,24" Click="AddPhotoButton_Click"/>
+        <Button Height="100" Width="100" Background="LightGray" Content="Add photo" Margin="0,24"/>
         <TextBox x:Name="Name" Header= "Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
         <TextBox x:Name="Email" Header="Email" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
         <TextBox x:Name="Address" Header="Address" PlaceholderText="Address" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
@@ -31,6 +31,6 @@
             </ComboBox>
         </RelativePanel>
         <TextBox x:Name="ZipCode" PlaceholderText="Zip Code" Margin="0,24,0,0" MaxLength="6" Width="100" HorizontalAlignment="Left" InputScope="Number" />
-        <Button Content="Save" Margin="0,24" Click="SaveButton_Click"/>
+        <Button Content="Save" Margin="0,24"/>
     </StackPanel>
 </Page>
