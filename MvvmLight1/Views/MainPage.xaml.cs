@@ -81,6 +81,12 @@ namespace MvvmLight1
                 case "Login":
                     ContentFrame.Navigate(typeof(login));
                     break;
+                case "Home":
+                    ContentFrame.Navigate(typeof(Views.Home));
+                    break;
+                case "Profiel":
+                    ContentFrame.Navigate(typeof(Views.Profiel));
+                    break;
                 case "settings":
                     ContentFrame.Navigate(typeof(SettingsPage));
                     break;

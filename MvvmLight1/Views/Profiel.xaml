@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="MvvmLight1.Views.Profiel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MvvmLight1.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Border BorderThickness="2" BorderBrush="Black" Height="667" Width="692">
+            <StackPanel HorizontalAlignment="Center" Height="667" Margin="0,0,0,0" VerticalAlignment="Center" Width="692" Background="#EEEEEE">
+            <Ellipse Height="200" Width="200" Margin="0,50,0,0">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="../Assets/trumpie.jpg"></ImageBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock x:Name="txtNaam" Margin="10,50,3.2,0" Text="Donald Trump" TextWrapping="Wrap" Height="53" RenderTransformOrigin="-2.097,1.067" FontFamily="Arial" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="txtWoonplaats" Margin="0,20,0,0" Text="Waregem" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Arial" FontSize="36"/>
+            <TextBlock x:Name="txtTelefoon" Margin="0,20,0,0" Text="0475/00.00.00" TextWrapping="Wrap" HorizontalAlignment="Center" FontFamily="Arial" FontSize="36"/>
+                <TextBlock x:Name="txtBedrijf" Margin="0,50,0,0" Text="Jolan Industries Inc." TextWrapping="Wrap" FontFamily="Arial" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" TextDecorations="Underline"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
