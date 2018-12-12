@@ -26,5 +26,15 @@ namespace MvvmLight1
         {
             this.InitializeComponent();
         }
+
+        public void AddPhotoButton_Click()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveButton_Click()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

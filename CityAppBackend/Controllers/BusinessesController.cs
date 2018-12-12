@@ -18,6 +18,11 @@ namespace CityAppBackend.Controllers
         public BusinessesController(CityAppBackendContext context)
         {
             _context = context;
+            if(_context.Business.Count() == 0)
+            {
+                _context.Business.Add(new Business { Name = "Business 1", Category = "Restaurant" });
+                _context.SaveChanges();
+            }
         }
 
         // GET: api/Businesses
