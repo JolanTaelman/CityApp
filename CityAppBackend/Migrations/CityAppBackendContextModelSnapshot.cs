@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CityAppBackend.Migrations
 {
+    //EntityFrameworkCore\update-database
+
     [DbContext(typeof(CityAppBackendContext))]
     partial class CityAppBackendContextModelSnapshot : ModelSnapshot
     {
