@@ -17,7 +17,10 @@
             <TextBlock x:Name="lbl_password" HorizontalAlignment="Center" Text="Wachtwoord" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" FontSize="20" Margin="0,20,0,0"/>
                 <TextBox Text="{Binding password,Mode=TwoWay}" x:Name="in_password" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="200" Padding="10,3,6,5" Margin="0,5,0,0"/>
                 <Button Command="{Binding LoginCommand}" Content="Aanmelden" HorizontalAlignment="Center" Margin="0,15,0,0" MinWidth="170" VerticalAlignment="Stretch" RenderTransformOrigin="0.504,2.518"/>
+                
+
             </StackPanel>
+           
         </Border>
     </Grid>
 </Page>

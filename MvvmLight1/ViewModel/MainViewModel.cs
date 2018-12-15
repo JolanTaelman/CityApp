@@ -26,6 +26,8 @@ namespace MvvmLight1.ViewModel
         private RelayCommand<string> _navigateCommand;
         private RelayCommand<string> _navigateLogin;
         private RelayCommand<string> _navigateHome;
+
+        private RelayCommand<string> _navigateRegister;
         private bool _runClock;
         private RelayCommand _sendMessageCommand;
         private RelayCommand _showDialogCommand;
@@ -66,6 +68,18 @@ namespace MvvmLight1.ViewModel
             }
         }
 
+
+        public RelayCommand<string> NavigateRegister
+        {
+            get
+            {
+                return _navigateRegister ?? (
+                           _navigateRegister = new RelayCommand<string>(
+
+                               p => _navigationService.NavigateTo(ViewModelLocator.registerKey, p),
+                               p => !string.IsNullOrEmpty(p)));
+            }
+        }
 
         public RelayCommand SendMessageCommand
         {
@@ -119,8 +133,11 @@ namespace MvvmLight1.ViewModel
         {
             _dataService = dataService;
             _navigationService = navigationService;
+        
             Initialize();
         }
+
+      
 
         public void RunClock()
         {

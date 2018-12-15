@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MvvmLight1.ViewModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -24,6 +25,7 @@ namespace MvvmLight1
     /// </summary>
     public sealed partial class login : Page
     {
+        public MainViewModel Vm => (MainViewModel)DataContext;
         public login()
         {
             this.InitializeComponent();
@@ -33,6 +35,12 @@ namespace MvvmLight1
         {
             var nav = ServiceLocator.Current.GetInstance<INavigationService>();
             nav.GoBack();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var nav = ServiceLocator.Current.GetInstance<INavigationService>();
+            nav.NavigateTo(ViewModelLocator.mainpageKey);
         }
     }
 }

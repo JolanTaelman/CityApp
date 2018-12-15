@@ -16,7 +16,9 @@ namespace MvvmLight1.ViewModel
     public class ViewModelLocator
     {
         public const string loginKey = "login";
+        public const string registerKey = "register";
         public const string homeKey = "home";
+        public const string mainpageKey = "Mainpage";
 
 
         /// <summary>
@@ -35,7 +37,8 @@ namespace MvvmLight1.ViewModel
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             var nav = new NavigationService();
-            SimpleIoc.Default.Register<INavigationService>(() => nav);
+            nav.Configure(mainpageKey,typeof(MainPage));
+            
 
             SimpleIoc.Default.Register<IDialogService, DialogService>();
 
@@ -48,9 +51,11 @@ namespace MvvmLight1.ViewModel
             {
                 SimpleIoc.Default.Register<IDataService, DataService>();
             }
-
+            SimpleIoc.Default.Register<INavigationService>(() => nav);
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<LoginViewModel>();
+            SimpleIoc.Default.Register<LoginPageViewModel>();
+            SimpleIoc.Default.Register<RegisterViewModel>();
         }
 
         /// <summary>
@@ -61,5 +66,7 @@ namespace MvvmLight1.ViewModel
             Justification = "This non-static member is needed for data binding purposes.")]
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
         public LoginViewModel LoginPage => ServiceLocator.Current.GetInstance<LoginViewModel>();
+        public LoginPageViewModel LoginPageViewModel => ServiceLocator.Current.GetInstance<LoginPageViewModel>();
+        public RegisterViewModel RegisterViewModel => ServiceLocator.Current.GetInstance<RegisterViewModel>();
     }
 }

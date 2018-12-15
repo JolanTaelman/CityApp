@@ -6,6 +6,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
+using MvvmLight1.Views;
 
 namespace MvvmLight1
 {
@@ -51,7 +52,7 @@ namespace MvvmLight1
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(LoginPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
@@ -91,5 +92,7 @@ namespace MvvmLight1
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+
     }
 }

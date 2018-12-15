@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:MvvmLight1.ViewModel"
              xmlns:ignore="http://www.galasoft.ch/ignore"
-             xmlns:local="using:MvvmLight1"
+             xmlns:local="using:MvvmLight1" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d ignore"
-             RequestedTheme="Light">
+            RequestedTheme="Light"
+             >
 
     <Application.Resources>
         
@@ -16,4 +17,6 @@
                              d:IsDataSource="True" />
         
     </Application.Resources>
+    
+
 </Application>

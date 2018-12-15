@@ -17,7 +17,6 @@
 
         <NavigationView x:Name="NavView" ItemInvoked="NavView_ItemInvoked" Loaded="NavView_Loaded">
             <NavigationView.MenuItems>
-                <NavigationViewItem x:Uid="LoginNavItem" Icon="Admin" Content="Login"  Tag="Login" />
                 <NavigationViewItem x:Uid="HomeNavItem" Icon="Home" Content="Home" Tag="Home" />
                 <NavigationViewItem x:Uid="ProfielNavItem" Icon="People" Content="Profiel" Tag="Profiel"/>
                 <NavigationViewItem x:Uid="BedrijfNavItem" Icon="Map" Content="Bedrijf" Tag="Bedrijf"/>
