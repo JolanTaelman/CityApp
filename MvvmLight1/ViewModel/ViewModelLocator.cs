@@ -50,6 +50,7 @@ namespace MvvmLight1.ViewModel
             }
 
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<LoginViewModel>();
         }
 
         /// <summary>
@@ -59,5 +60,6 @@ namespace MvvmLight1.ViewModel
             "CA1822:MarkMembersAsStatic",
             Justification = "This non-static member is needed for data binding purposes.")]
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
+        public LoginViewModel LoginPage => ServiceLocator.Current.GetInstance<LoginViewModel>();
     }
 }
