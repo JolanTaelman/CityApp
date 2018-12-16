@@ -26,5 +26,10 @@ namespace MvvmLight1.Views
         {
             this.InitializeComponent();
         }
+
+        private void TxtNaam_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

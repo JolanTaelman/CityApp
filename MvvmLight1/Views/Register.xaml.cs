@@ -25,18 +25,12 @@ namespace MvvmLight1
     /// </summary>
     public sealed partial class Register : Page
     {
+
+        public String SecurePassword { private get; set; }
+
         public Register()
         {
             this.InitializeComponent();
         }
-
-        public void AddPhotoButton_Click()
-        {
-            throw new NotImplementedException();
-        }
-
-      
-
-      
     }
 }

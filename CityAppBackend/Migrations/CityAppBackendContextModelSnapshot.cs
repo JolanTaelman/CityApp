@@ -8,8 +8,6 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CityAppBackend.Migrations
 {
-    //EntityFrameworkCore\update-database
-
     [DbContext(typeof(CityAppBackendContext))]
     partial class CityAppBackendContextModelSnapshot : ModelSnapshot
     {
@@ -41,6 +39,26 @@ namespace CityAppBackend.Migrations
                     b.ToTable("Business");
                 });
 
+            modelBuilder.Entity("CityAppBackend.Models.Uren", b =>
+                {
+                    b.Property<Guid>("UrenId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid?>("BusinessId");
+
+                    b.Property<string>("Dag");
+
+                    b.Property<DateTime>("Openingsuren");
+
+                    b.Property<DateTime>("Sluitingsuren");
+
+                    b.HasKey("UrenId");
+
+                    b.HasIndex("BusinessId");
+
+                    b.ToTable("Uren");
+                });
+
             modelBuilder.Entity("CityAppBackend.Models.User", b =>
                 {
                     b.Property<Guid>("UserId")
@@ -58,6 +76,13 @@ namespace CityAppBackend.Migrations
                     b.HasOne("CityAppBackend.Models.User", "User")
                         .WithOne("Business")
                         .HasForeignKey("CityAppBackend.Models.Business", "Business");
+                });
+
+            modelBuilder.Entity("CityAppBackend.Models.Uren", b =>
+                {
+                    b.HasOne("CityAppBackend.Models.Business")
+                        .WithMany("OpeningsUren")
+                        .HasForeignKey("BusinessId");
                 });
 #pragma warning restore 612, 618
         }

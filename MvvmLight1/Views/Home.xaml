@@ -9,17 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Border Width="1225" Height="690" BorderThickness="2" BorderBrush="Black">
-            <StackPanel Height="690" VerticalAlignment="Top" Width="1225" Background="#EEEEEE" HorizontalAlignment="Stretch">
-                <TextBlock Margin="50,50,0,0" Text="CityApp" TextWrapping="Wrap" FontFamily="Arial" FontWeight="Bold" FontSize="48"/>
-                <ComboBox Header="Categorieën" PlaceholderText="Pick a color" Width="200">
-                    <x:String>Frieten</x:String>
-                    <x:String>Pizza</x:String>
-                    <x:String>Pita</x:String>
-                    <x:String>Chinees</x:String>
-                    <x:String>Veggie</x:String>
-                </ComboBox>
+            <StackPanel VerticalAlignment="Stretch"   Background="#EEEEEE" HorizontalAlignment="Stretch">
+                <TextBlock Margin="50,50,0,0" Text="CityApp" TextWrapping="Wrap"  FontWeight="Bold" FontSize="48"/>
+            <ComboBox Header="Categorieën"  Margin="50,50,0,0" PlaceholderText="Maak uw keuze" Width="200"/>
             </StackPanel>
-        </Border>
     </Grid>
 </Page>

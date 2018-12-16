@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CityAppBackend.Migrations
 {
     [DbContext(typeof(CityAppBackendContext))]
-    [Migration("20181212111618_newer")]
-    partial class newer
+    [Migration("20181215213740_Uren")]
+    partial class Uren
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,6 +41,26 @@ namespace CityAppBackend.Migrations
                     b.ToTable("Business");
                 });
 
+            modelBuilder.Entity("CityAppBackend.Models.Uren", b =>
+                {
+                    b.Property<Guid>("UrenId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid?>("BusinessId");
+
+                    b.Property<string>("Dag");
+
+                    b.Property<DateTime>("Openingsuren");
+
+                    b.Property<DateTime>("Sluitingsuren");
+
+                    b.HasKey("UrenId");
+
+                    b.HasIndex("BusinessId");
+
+                    b.ToTable("Uren");
+                });
+
             modelBuilder.Entity("CityAppBackend.Models.User", b =>
                 {
                     b.Property<Guid>("UserId")
@@ -58,6 +78,13 @@ namespace CityAppBackend.Migrations
                     b.HasOne("CityAppBackend.Models.User", "User")
                         .WithOne("Business")
                         .HasForeignKey("CityAppBackend.Models.Business", "Business");
+                });
+
+            modelBuilder.Entity("CityAppBackend.Models.Uren", b =>
+                {
+                    b.HasOne("CityAppBackend.Models.Business")
+                        .WithMany("OpeningsUren")
+                        .HasForeignKey("BusinessId");
                 });
 #pragma warning restore 612, 618
         }

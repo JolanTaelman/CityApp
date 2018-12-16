@@ -22,7 +22,7 @@
                 <NavigationViewItem x:Uid="BedrijfNavItem" Icon="Map" Content="Bedrijf" Tag="Bedrijf"/>
             </NavigationView.MenuItems>
 
-            <Frame x:Name="ContentFrame">
+            <Frame x:Name="ContentFrame" VerticalAlignment="Stretch">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
                         <NavigationThemeTransition/>
@@ -30,8 +30,9 @@
                 </Frame.ContentTransitions>
             </Frame>
         </NavigationView>
+
     </Grid>
 
 
-   
+
 </Page>

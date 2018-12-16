@@ -16,10 +16,10 @@
                     <ImageBrush ImageSource="../Assets/trumpie.jpg"></ImageBrush>
                 </Ellipse.Fill>
             </Ellipse>
-            <TextBlock x:Name="txtNaam" Margin="10,50,3.2,0" Text="Donald Trump" TextWrapping="Wrap" Height="53" RenderTransformOrigin="-2.097,1.067" FontFamily="Arial" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="txtNaam" Margin="10,50,3.2,0" Text="Donald Trump" TextWrapping="Wrap" Height="53" RenderTransformOrigin="-2.097,1.067" FontFamily="Arial" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Stretch" SelectionChanged="TxtNaam_SelectionChanged"/>
             <TextBlock x:Name="txtWoonplaats" Margin="0,20,0,0" Text="Waregem" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Arial" FontSize="36"/>
             <TextBlock x:Name="txtTelefoon" Margin="0,20,0,0" Text="0475/00.00.00" TextWrapping="Wrap" HorizontalAlignment="Center" FontFamily="Arial" FontSize="36"/>
-                <TextBlock x:Name="txtBedrijf" Margin="0,50,0,0" Text="Jolan Industries Inc." TextWrapping="Wrap" FontFamily="Arial" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" TextDecorations="Underline"/>
+            <TextBlock x:Name="txtBedrijf" Margin="0,50,0,0" Text="Jolan Industries Inc." TextWrapping="Wrap" FontFamily="Arial" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" TextDecorations="Underline"/>
             </StackPanel>
         </Border>
     </Grid>

@@ -10,19 +10,18 @@
     DataContext="{Binding RegisterViewModel, Source={StaticResource Locator}}"
     >
 
-    <StackPanel>
-        <TextBlock Text="New User" Style="{StaticResource TitleTextBlockStyle}"/>
-        <Button Height="100" Width="100" Background="LightGray" Content="Add photo" Margin="0,24"/>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <TextBox Text="{Binding username,Mode=TwoWay}" x:Name="Name" Header= "Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
         <TextBox Text="{Binding email,Mode=TwoWay}" x:Name="Email" Header="Email" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
         <TextBox Text="{Binding password,Mode=TwoWay}" x:Name="Password" Header= "Wachtwoord" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="Password"/>
         <TextBox Text="{Binding adres1,Mode=TwoWay}" x:Name="Address" Header="Address" PlaceholderText="Address" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
         <TextBox Text="{Binding adress2,Mode=TwoWay}" x:Name="Address2" Margin="0,24,0,0" PlaceholderText="Address 2" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
         <RelativePanel>
-            <TextBox Text="{Binding gemeente,Mode=TwoWay}" x:Name="City" PlaceholderText="City" Margin="0,24,0,0" MaxLength="50" Width="200" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
-            <ComboBox ItemsSource="{Binding staatLijst,Mode=TwoWay}" SelectedItem="{Binding staat,Mode=TwoWay}" x:Name="State" PlaceholderText="State" Margin="24,24,0,0"  Width="100" RelativePanel.RightOf="City" />
+            <TextBox Text="{Binding gemeente,Mode=TwoWay}" x:Name="City" PlaceholderText="City" Margin="0,24,0,0" MaxLength="50" Width="14" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+            <ComboBox ItemsSource="{Binding staatLijst,Mode=TwoWay}" SelectedItem="{Binding staat,Mode=TwoWay}" x:Name="State" PlaceholderText="State" Margin="25,24,0,0"  Width="100" RelativePanel.RightOf="City" />
+            <TextBox Text="{Binding postcode,Mode=TwoWay}" x:Name="ZipCode" PlaceholderText="Zip Code" Margin="25,24,0,0" MaxLength="6" Width="100"  InputScope="Number" RelativePanel.RightOf="State" />
+
         </RelativePanel>
-        <TextBox Text="{Binding postcode,Mode=TwoWay}" x:Name="ZipCode" PlaceholderText="Zip Code" Margin="0,24,0,0" MaxLength="6" Width="100" HorizontalAlignment="Left" InputScope="Number" />
         <Button Content="Save" Margin="0,24" Command="{Binding RegisterCommand}"/>
     </StackPanel>
 </Page>

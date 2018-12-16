@@ -20,7 +20,18 @@ namespace CityAppBackend.Controllers
             _context = context;
             if(_context.Business.Count() == 0)
             {
-                _context.Business.Add(new Business { Name = "Business 1", Category = "Restaurant" });
+                var uren = new List<Uren>();
+                var user = new User{Name = "Mark"};
+
+                uren.Add(new Uren { Dag = "Maandag", Openingsuren = DateTime.Parse("8:30:00"), Sluitingsuren = DateTime.Parse("18:30:00") });
+                uren.Add(new Uren { Dag = "Dinsdag", Openingsuren = DateTime.Parse("8:30:00"), Sluitingsuren = DateTime.Parse("18:30:00") });
+                uren.Add(new Uren { Dag = "Woensdag", Openingsuren = DateTime.Parse("8:30:00"), Sluitingsuren = DateTime.Parse("18:30:00") });
+                uren.Add(new Uren { Dag = "Donderdag", Openingsuren = DateTime.Parse("8:30:00"), Sluitingsuren = DateTime.Parse("18:30:00") });
+                uren.Add(new Uren { Dag = "Vrijdag", Openingsuren = DateTime.Parse("8:30:00"), Sluitingsuren = DateTime.Parse("18:30:00") });
+                uren.Add(new Uren { Dag = "Zaterdag", Openingsuren = DateTime.Parse("8:30:00"), Sluitingsuren = DateTime.Parse("18:30:00") });
+
+                _context.User.Add(user);
+                _context.Business.Add(new Business { Name = "Business 1", Category = "Restaurant" , User = user, OpeningsUren = uren});
                 _context.SaveChanges();
             }
         }

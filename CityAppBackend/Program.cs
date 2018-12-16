@@ -16,13 +16,7 @@ namespace CityAppBackend
     {
         public static void Main(string[] args)
         {
-           /* var dbcob = new DbContextOptionsBuilder<CityAppBackendContext>();
-            dbcob.UseSqlServer("Data Source=DESKTOP-DBSBTJJ;Initial Catalog=CityApp;Integrated Security=True;Pooling=False");
-                
-            using (var db = new CityAppBackendContext(dbcob.Options))
-            {
-
-            }*/
+           
 
             CreateWebHostBuilder(args).Build().Run();
         }

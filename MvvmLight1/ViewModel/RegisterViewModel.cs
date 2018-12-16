@@ -27,6 +27,7 @@ namespace MvvmLight1.ViewModel
         }
 
         public string _password;
+
         public string password
         {
             get { return _password; }

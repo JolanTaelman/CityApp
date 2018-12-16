@@ -17,5 +17,7 @@ namespace CityAppBackend.Models
         public DbSet<CityAppBackend.Models.Business> Business { get; set; }
 
         public DbSet<CityAppBackend.Models.User> User { get; set; }
+
+        public DbSet<CityAppBackend.Models.Event> Event { get; set; }
     }
 }
