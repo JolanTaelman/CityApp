@@ -28,27 +28,15 @@
                    Foreground="Gray"
                    TextWrapping="Wrap"
                    />
-            <GridView ItemsSource="{x:Bind gekozenBusiness.OpeningsUren}">
+            <GridView ItemsSource="{Binding gekozenBusiness.OpeningsUren}" ItemTemplate="{StaticResource OpeningsurenGrid}">
                 <GridView.ItemsPanel>
+                    
                 <ItemsPanelTemplate>
                     <WrapGrid Orientation="Vertical"/>
+                    
                 </ItemsPanelTemplate>
+                    
             </GridView.ItemsPanel>
-                <GridView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition MinWidth="50"/>
-                                <ColumnDefinition MinWidth="50"/>
-                                <ColumnDefinition MinWidth="50"/>
-                            </Grid.ColumnDefinitions>
-
-                            <TextBlock Grid.Column="0" Text="{x:Bind Dag}"/>
-                            <TextBlock Grid.Column="1" Text="{x:Bind Openingsuren}"/>
-                            <TextBlock Grid.Column="2" Text="{x:Bind Sluitingsuren}"/>
-                        </Grid>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
             </GridView>
         </StackPanel>
     </Grid>
