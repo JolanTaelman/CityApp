@@ -17,9 +17,9 @@
                              d:IsDataSource="True" />
 
         <DataTemplate x:Key="BusinessItem">
-            <StackPanel>
-                <TextBlock Text="{Binding Path=Name}" />
-                <TextBlock Text="{Binding Path=Category}"/>
+            <StackPanel MinWidth="200" MinHeight="100" Background="LightGray">
+                <TextBlock FontSize="16" Margin="6,12,0,0" Text="{Binding Path=Name}" />
+                <TextBlock FontSize="10" Margin="6,0"  Text="{Binding Path=Category}"/>
             </StackPanel>
         </DataTemplate>
 

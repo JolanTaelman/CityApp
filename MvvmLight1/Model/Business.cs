@@ -10,7 +10,7 @@ namespace MvvmLight1.Model
     {
         public Guid BusinessId { get; set; }
         public string Name { get; set; }
-        public String Category { get; set; }
+        public string Category { get; set; }
         public ICollection<Uren> OpeningsUren { get; set; }
 
         [ForeignKey("Business")]
