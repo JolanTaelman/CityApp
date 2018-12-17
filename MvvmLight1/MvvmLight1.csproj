@@ -96,6 +96,7 @@
     <Compile Include="Design\DesignDataService.cs" />
     <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Model\RegisterModel.cs" />
+    <Compile Include="Model\Uren.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="ViewModel\LoginPageViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
