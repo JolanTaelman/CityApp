@@ -88,7 +88,10 @@ namespace MvvmLight1
                 case "settings":
                     ContentFrame.Navigate(typeof(SettingsPage));
                     break;
-               
+                case "Bedrijf toevoegen":
+                    ContentFrame.Navigate(typeof(Views.RegistreerBusiness));
+                    break;
+
 
             }
         }
