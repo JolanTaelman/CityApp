@@ -18,8 +18,8 @@
         <NavigationView x:Name="NavView" ItemInvoked="NavView_ItemInvoked" Loaded="NavView_Loaded">
             <NavigationView.MenuItems>
                 <NavigationViewItem x:Uid="LoginNavItem" Icon="Admin" Content="Login"  Tag="Login" />
-                <NavigationViewItem x:Uid="RegisterNavItem" Icon="Home" Content="Register" Tag="Register" />
-                
+                <NavigationViewItem x:Uid="RegisterNavItem" Icon="People" Content="Register" Tag="Register" />
+                <NavigationViewItem x:Uid="HomeNavItem" Icon="Home" Content="Home" Tag="Home" />
             </NavigationView.MenuItems>
 
             <Frame x:Name="ContentFrame">

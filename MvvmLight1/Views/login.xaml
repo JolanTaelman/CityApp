@@ -14,7 +14,7 @@
             <TextBox  x:Name="in_email" Header="Email" Margin="0,5,0,0" MinWidth="200" VerticalAlignment="Stretch" />
             <PasswordBox  x:Name="in_password" Header="Wachtwoord"  VerticalAlignment="Top" MinWidth="200" Padding="10,3,6,5" Margin="0,5,0,0"/>
             <Button Click="Login_Click" Content="Aanmelden" Background="Gray" Margin="0,15,0,0" MinWidth="100" VerticalAlignment="Stretch" RenderTransformOrigin="0.504,2.518"/>
-                <Button Click="AnoniemLogin_Click"  Content="Anoniem aanmelden" Background="Gray" Margin="0,15,0,0" MinWidth="100" VerticalAlignment="Stretch" RenderTransformOrigin="0.504,2.518"/>
+               
         </StackPanel>
            
     </Grid>

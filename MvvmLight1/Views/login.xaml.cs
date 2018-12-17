@@ -47,13 +47,7 @@ namespace MvvmLight1
             nav.GoBack();
         }
 
-        private void AnoniemLogin_Click(object sender, RoutedEventArgs e)
-        {
-            
-            
-            nav.NavigateTo(ViewModelLocator.anoniemMainpageKey);
-            
-        }
+     
         private async void Login_Click(object sender, RoutedEventArgs e)
         {
             try

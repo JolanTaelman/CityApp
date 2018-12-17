@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using GalaSoft.MvvmLight.Views;
+using Microsoft.Practices.ServiceLocation;
 using MvvmLight1.ViewModel;
 
 
@@ -92,7 +94,10 @@ namespace MvvmLight1.Views
                 case "Register":
                     ContentFrame.Navigate(typeof(Register));
                     break;
-
+                case "Home":
+                    var nav = ServiceLocator.Current.GetInstance<INavigationService>();
+                    nav.NavigateTo(ViewModelLocator.anoniemMainpageKey);
+                    break;
             }
         }
 
