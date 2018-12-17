@@ -6,18 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:helpers="using:MvvmLight1.Helpers"
     DataContext="{Binding LoginPage, Source={StaticResource Locator}}">
     
     <Grid>
-            <StackPanel Orientation="Vertical" Height="300" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" >
-            <TextBlock x:Name="lbl_Email" HorizontalAlignment="Center" Text="Emailadres" TextWrapping="Wrap" VerticalAlignment="Center" Height="32" FontSize="20" Margin="10,25,0,0" Width="115"/>
-                <TextBox x:Name="in_email" Margin="0,5,0,0" HorizontalAlignment="Center" MinWidth="200" VerticalAlignment="Stretch" />
-            <TextBlock x:Name="lbl_password" HorizontalAlignment="Center" Text="Wachtwoord" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" FontSize="20" Margin="0,20,0,0"/>
-            <PasswordBox x:Name="in_password" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="200" Padding="10,3,6,5" Margin="0,5,0,0"  />
-                <Button Click="Login_Click" Content="Aanmelden" HorizontalAlignment="Center" Margin="0,15,0,0" MinWidth="170" VerticalAlignment="Stretch" RenderTransformOrigin="0.504,2.518"/>
-                <Button Click="AnoniemLogin_Click" Content="Aanmelden zonder gegevens" HorizontalAlignment="Center" Margin="0,15,0,0" MinWidth="170" VerticalAlignment="Stretch" RenderTransformOrigin="0.504,2.518"/>
-
+            <StackPanel Orientation="Vertical" Height="250" Width="250" HorizontalAlignment="Center"  Margin="0,0,0,0" >
+            <TextBox Text="{Binding username,Mode=TwoWay}" x:Name="in_email" Header="Email" Margin="0,5,0,0" MinWidth="200" VerticalAlignment="Stretch" />
+            <TextBox Text="{Binding password,Mode=TwoWay}" x:Name="in_password" Header="Wachtwoord"  VerticalAlignment="Top" MinWidth="200" Padding="10,3,6,5" Margin="0,5,0,0"/>
+            <Button Command="{Binding LoginCommand}"  Content="Aanmelden" Background="Gray" Margin="0,15,0,0" MinWidth="100" VerticalAlignment="Stretch" RenderTransformOrigin="0.504,2.518"/>
         </StackPanel>
            
     </Grid>

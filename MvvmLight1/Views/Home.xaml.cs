@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvvmLight1.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -25,10 +26,30 @@ namespace MvvmLight1.Views
     {
 
         ObservableCollection<String> categories = new ObservableCollection<String>();
+        ObservableCollection<Business> businesses = new ObservableCollection<Business>();
 
         public Home()
         {
+            categories.Add("Restaurant");
+            categories.Add("Winkel");
+            categories.Add("Cafe");
+            businesses.Add(new Business { Category = "Restaurant", Name = "Pizza Frank"});
+            businesses.Add(new Business { Category = "Winkel", Name = "Okay Gent" });
+            businesses.Add(new Business { Category = "Cafe", Name = "Cafe bob" });
+
             this.InitializeComponent();
         }
+
+        public void Home_SelectionChanged(object sender, SelectionChangedEventArgs args)
+        {
+
+        }
+
+
+        public void Home_ItemClick(object sender, ItemClickEventArgs args)
+        {
+
+        }
+
     }
 }

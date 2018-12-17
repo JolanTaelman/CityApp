@@ -22,6 +22,6 @@
             <TextBox Text="{Binding postcode,Mode=TwoWay}" x:Name="ZipCode" PlaceholderText="Zip Code" Margin="25,24,0,0" MaxLength="6" Width="100"  InputScope="Number" RelativePanel.RightOf="State" />
 
         </RelativePanel>
-        <Button Content="Save" Margin="0,24" Command="{Binding RegisterCommand}"/>
+        <Button Content="Save" Margin="0,24" Background="Gray" Command="{Binding RegisterCommand}"/>
     </StackPanel>
 </Page>
