@@ -20,6 +20,7 @@
                 <TextBlock x:Name="txtWoonplaats" Margin="0,20,0,0" Text="Waregem" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Arial" FontSize="36"/>
                 <TextBlock x:Name="txtTelefoon" Margin="0,20,0,0" Text="0475/00.00.00" TextWrapping="Wrap" HorizontalAlignment="Center" FontFamily="Arial" FontSize="36"/>
                 <TextBlock x:Name="txtBedrijf" Margin="0,50,0,0" Text="Jolan Industries Inc." TextWrapping="Wrap" FontFamily="Arial" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" TextDecorations="Underline"/>
+                <Button x:Name="btnVoegBedrijfToe" Margin="0,20,0,0" Content="Bedrijf toevoegen" HorizontalAlignment="Center" Click="BtnVoegBedrijfToe_Clicked"/>
             </StackPanel>
         </Border>
     </Grid>

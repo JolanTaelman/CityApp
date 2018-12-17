@@ -20,21 +20,11 @@ namespace MvvmLight1.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Profiel : Page
+    public sealed partial class RegistreerBedrijf : Page
     {
-        public Profiel()
+        public RegistreerBedrijf()
         {
             this.InitializeComponent();
-        }
-
-        private void TxtNaam_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnVoegBedrijfToe_Clicked(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
