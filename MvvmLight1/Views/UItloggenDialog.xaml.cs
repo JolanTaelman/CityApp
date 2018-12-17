@@ -14,20 +14,16 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 
+
 namespace MvvmLight1.Views
 {
-    public sealed partial class ContentDialog1 : ContentDialog
+    public sealed partial class UItloggenDialog : ContentDialog
     {
-        public ContentDialog1()
+        public UItloggenDialog()
         {
             this.InitializeComponent();
         }
-
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
-        }
-
-        private void ContentDialog_SecondaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
         }
     }

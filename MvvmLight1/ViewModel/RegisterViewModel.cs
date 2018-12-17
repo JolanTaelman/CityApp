@@ -180,6 +180,7 @@ namespace MvvmLight1.ViewModel
                     messageDialog.Commands.Add(new UICommand("Sluiten"));
                     messageDialog.CancelCommandIndex = 1;
                     await messageDialog.ShowAsync();
+
                 }
                 catch (Exception e)
                 {

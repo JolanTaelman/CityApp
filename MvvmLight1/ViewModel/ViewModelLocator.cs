@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
 using MvvmLight1.Model;
+using MvvmLight1.Views;
 
 namespace MvvmLight1.ViewModel
 {
@@ -19,7 +20,7 @@ namespace MvvmLight1.ViewModel
         public const string registerKey = "register";
         public const string homeKey = "home";
         public const string mainpageKey = "Mainpage";
-
+        public const string anoniemMainpageKey = "AnoniemMainpage"; 
 
         /// <summary>
         /// This property can be used to force the application to run with design time data.
@@ -38,8 +39,8 @@ namespace MvvmLight1.ViewModel
 
             var nav = new NavigationService();
             nav.Configure(mainpageKey,typeof(MainPage));
-            
-
+            nav.Configure(loginKey,typeof(LoginPage));
+            nav.Configure(anoniemMainpageKey,typeof(AnoniemMainPage));
             SimpleIoc.Default.Register<IDialogService, DialogService>();
 
             if (ViewModelBase.IsInDesignModeStatic

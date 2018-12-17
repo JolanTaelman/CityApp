@@ -104,6 +104,9 @@
     <Compile Include="Views\BusinessDetails.xaml.cs">
       <DependentUpon>BusinessDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AnoniemMainPage.xaml.cs">
+      <DependentUpon>AnoniemMainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegistreerBusiness.xaml.cs">
       <DependentUpon>RegistreerBusiness.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,9 @@
     </Compile>
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="Views\UItloggenDialog.xaml.cs">
+      <DependentUpon>UItloggenDialog.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -166,6 +172,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Views\BusinessDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnoniemMainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -202,6 +212,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UItloggenDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

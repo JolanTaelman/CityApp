@@ -1,34 +1,46 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
 using Windows.UI.Core;
-using Windows.UI.Xaml.Navigation;
-using MvvmLight1.ViewModel;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using System.Linq;
-using Windows.UI.Popups;
-using Firebase.Auth;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
 using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
-using MvvmLight1.Views;
+using MvvmLight1.ViewModel;
 
-namespace MvvmLight1
+// The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
+
+namespace MvvmLight1.Views
 {
-    public sealed partial class MainPage
+    public sealed partial class AnoniemMainPage
     {
         public MainViewModel Vm => (MainViewModel)DataContext;
-        
-        public MainPage()
+        public INavigationService nav;
+        public AnoniemMainPage()
         {
             InitializeComponent();
 
             SystemNavigationManager.GetForCurrentView().BackRequested += SystemNavigationManagerBackRequested;
-            
+            nav = ServiceLocator.Current.GetInstance<INavigationService>();
+            ContentFrame.Navigate(typeof(Home));
             Loaded += (s, e) =>
             {
                 Vm.RunClock();
             };
         }
+        
 
+   
         private void SystemNavigationManagerBackRequested(object sender, BackRequestedEventArgs e)
         {
             if (Frame.CanGoBack)
@@ -70,7 +82,7 @@ namespace MvvmLight1
                 var item = sender.MenuItems.OfType<NavigationViewItem>().First(x => (string)x.Content == (string)args.InvokedItem);
                 NavView_Navigate(item as NavigationViewItem);*/
 
-                 ContentFrame.Navigate(typeof(SettingsPage));
+                ContentFrame.Navigate(typeof(SettingsPage));
             }
             else
             {
@@ -84,42 +96,17 @@ namespace MvvmLight1
         {
             switch (item.Tag)
             {
-                
+
                 case "Home":
                     ContentFrame.Navigate(typeof(Views.Home));
                     break;
-                case "Profiel":
-                    ContentFrame.Navigate(typeof(Views.Profiel));
-                    break;
                 case "settings":
                     ContentFrame.Navigate(typeof(SettingsPage));
+                    break;  
+                case "Inloggen":
+                    var nav = ServiceLocator.Current.GetInstance<INavigationService>();
+                    nav.NavigateTo(ViewModelLocator.loginKey);
                     break;
-                case "Bedrijf toevoegen":
-                    ContentFrame.Navigate(typeof(Views.RegistreerBusiness));
-                    break;
-                case "Uitloggen":
-                    var messageDialog = new MessageDialog("Wil je uitloggen?");
-                    var yesCommand = new UICommand("Uitloggen", cmd => { });
-                    var cancelCommand = new UICommand("Sluiten", cmd => { });
-                   messageDialog.Commands.Add(yesCommand);
-                    messageDialog.Commands.Add(cancelCommand);
-
-                    messageDialog.DefaultCommandIndex = 0;
-                    
-                   var command =  await messageDialog.ShowAsync();
-                    if (command == yesCommand)
-                    {
-                        var nav = ServiceLocator.Current.GetInstance<INavigationService>();
-                        nav.NavigateTo(ViewModelLocator.loginKey);
-                       // ContentFrame.Navigate(typeof(Views.LoginPage));
-                    }
-                    else
-                    {
-                        messageDialog.CancelCommandIndex = 1;
-                        
-                    }
-                    break;
-
             }
         }
 

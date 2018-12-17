@@ -21,6 +21,7 @@
                 <NavigationViewItem x:Uid="ProfielNavItem" Icon="People" Content="Profiel" Tag="Profiel"/>
                 <NavigationViewItem x:Uid="BedrijfNavItem" Icon="Map" Content="Bedrijf" Tag="Bedrijf"/>
                 <NavigationViewItem x:Uid="BedrijfToevoegenNavItem" Icon="Map" Content="Bedrijf toevoegen" Tag="Bedrijf toevoegen"/>
+                <NavigationViewItem x:Uid="Uitloggen" Content="Uitloggen" Tag="Uitloggen"/>
             </NavigationView.MenuItems>
 
             <Frame x:Name="ContentFrame" VerticalAlignment="Stretch">

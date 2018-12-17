@@ -51,7 +51,7 @@ namespace MvvmLight1
         {
             
             
-            nav.NavigateTo(ViewModelLocator.mainpageKey);
+            nav.NavigateTo(ViewModelLocator.anoniemMainpageKey);
             
         }
         private async void Login_Click(object sender, RoutedEventArgs e)
