@@ -27,7 +27,7 @@ namespace MvvmLight1.Views
 
         ObservableCollection<String> categories = new ObservableCollection<String>();
         ObservableCollection<Business> businesses = new ObservableCollection<Business>();
-
+        
         public Home()
         {
             categories.Add("Restaurant");

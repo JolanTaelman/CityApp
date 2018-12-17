@@ -173,37 +173,26 @@ namespace MvvmLight1.ViewModel
             {
                 RegisterModel rm = (RegisterModel) p;
                 HttpClient client = new HttpClient();
-
-                var test = await authProvider.CreateUserWithEmailAndPasswordAsync(rm.Email, rm.Passwoord);
-                var messageDialog = new MessageDialog("Account geregistreerd");
-                messageDialog.Commands.Add(new UICommand("Sluiten"));
-                messageDialog.CancelCommandIndex = 1;
-                await messageDialog.ShowAsync();
-            }
-
-
-            //  Debug.WriteLine(lst.Count);
-/*
-            try
-            {
-                using (HttpClient client = new HttpClient())
+                try
                 {
-                  
-                  //  string url = $@"https://localhost:44321/api/values";
-
-                    string value = await client.GetStringAsync(new Uri($@"https://localhost:44321/api/values"));
-                    Debug.WriteLine(value);
-                   // return JsonConvert.DeserializeObject<User>(User);
+                    var test = await authProvider.CreateUserWithEmailAndPasswordAsync(rm.Email, rm.Passwoord);
+                    var messageDialog = new MessageDialog("Account geregistreerd");
+                    messageDialog.Commands.Add(new UICommand("Sluiten"));
+                    messageDialog.CancelCommandIndex = 1;
+                    await messageDialog.ShowAsync();
                 }
-                
-            }
-            catch(Exception e)
-            {
-                Debug.WriteLine(e.ToString() + " TESTING");
-            }
-        }
+                catch (Exception e)
+                {
+                    var messageDialog = new MessageDialog("Account bestaat al");
+                    messageDialog.Commands.Add(new UICommand("Sluiten"));
+                    messageDialog.CancelCommandIndex = 1;
+                    await messageDialog.ShowAsync();
 
-       */
+                }
+               
+               
+            }
+
         }
 
     }
