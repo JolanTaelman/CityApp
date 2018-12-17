@@ -25,8 +25,9 @@ namespace MvvmLight1.Views
         public LoginPage()
         {
             InitializeComponent();
-
+            ContentFrame.Navigate(typeof(login));
             SystemNavigationManager.GetForCurrentView().BackRequested += SystemNavigationManagerBackRequested;
+            //  SystemNavigationManager.GetForCurrentView().BackRequested += SystemNavigationManagerBackRequested;
 
         }
 
@@ -56,7 +57,7 @@ namespace MvvmLight1.Views
             // set the initial SelectedItem 
             foreach (NavigationViewItemBase item in NavView.MenuItems)
             {
-                if (item is NavigationViewItem && item.Tag.ToString() == "Register")
+                if (item is NavigationViewItem && item.Tag.ToString() == "Login")
                 {
                     NavView.SelectedItem = item;
                     break;
