@@ -12,8 +12,15 @@ namespace CityAppBackend.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<Guid>(nullable: false),
-                    Name = table.Column<string>(nullable: true)
-                },
+                    Name = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
+                    Adres1 = table.Column<string>(nullable: true),
+                    Adres2 = table.Column<string>(nullable: true),
+                    Staat = table.Column<string>(nullable: true),
+                    Postcode = table.Column<string>(nullable: true),
+                    Gemeente = table.Column<string>(nullable: true)
+
+        },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.UserId);

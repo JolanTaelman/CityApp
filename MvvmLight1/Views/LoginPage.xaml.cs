@@ -91,8 +91,6 @@ namespace MvvmLight1.Views
                 case "Register":
                     ContentFrame.Navigate(typeof(Register));
                     break;
-                
-
 
             }
         }
