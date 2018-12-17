@@ -53,7 +53,6 @@ namespace MvvmLight1.ViewModel
             }
             SimpleIoc.Default.Register<INavigationService>(() => nav);
             SimpleIoc.Default.Register<MainViewModel>();
-            SimpleIoc.Default.Register<LoginViewModel>();
             SimpleIoc.Default.Register<LoginPageViewModel>();
             SimpleIoc.Default.Register<RegisterViewModel>();
         }
@@ -65,7 +64,6 @@ namespace MvvmLight1.ViewModel
             "CA1822:MarkMembersAsStatic",
             Justification = "This non-static member is needed for data binding purposes.")]
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
-        public LoginViewModel LoginPage => ServiceLocator.Current.GetInstance<LoginViewModel>();
         public LoginPageViewModel LoginPageViewModel => ServiceLocator.Current.GetInstance<LoginPageViewModel>();
         public RegisterViewModel RegisterViewModel => ServiceLocator.Current.GetInstance<RegisterViewModel>();
     }
