@@ -9,18 +9,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel   Background="#EEEEEE" >
-            <TextBlock Margin="50,50,0,0" Text="CityApp" TextWrapping="Wrap"  FontWeight="Bold" FontSize="48"/>
-            <ComboBox Header="Categorieën" ItemsSource="{x:Bind categories}"  Margin="50,50,0,0" PlaceholderText="Maak uw keuze" Width="200"/>
+        <StackPanel Background="#EEEEEE" >
+            
 
-            <GridView Header="businesses" ItemsSource="{x:Bind businesses}"
-         ItemTemplate="{StaticResource BusinessItem}"
-         IsItemClickEnabled="False"
-         IsSwipeEnabled="False"
-         CanDragItems="False"
-         SelectionMode="Single"
-         SelectionChanged="Home_SelectionChanged"
-         ItemClick="Home_ItemClick" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            <ComboBox Header="Categorieën" Margin="50,50,0,0"  ItemsSource="{x:Bind categories}"  PlaceholderText="Maak uw keuze" Width="200"/>
+
+            <GridView Margin="50,50,0,0"  Header="businesses" ItemsSource="{x:Bind businesses}"
+                 ItemTemplate="{StaticResource BusinessItem}"
+                 IsItemClickEnabled="False"
+                 IsSwipeEnabled="False"
+                 CanDragItems="False"
+                 SelectionMode="Single"
+                 SelectionChanged="Home_SelectionChanged"
+                 ItemClick="Home_ItemClick" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
         </StackPanel>
     </Grid>
 </Page>
