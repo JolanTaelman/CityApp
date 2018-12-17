@@ -172,7 +172,7 @@ namespace MvvmLight1.ViewModel
             if (p is RegisterModel)
             {
                 RegisterModel rm = (RegisterModel) p;
-                HttpClient client = new HttpClient();
+               
                 try
                 {
                     var test = await authProvider.CreateUserWithEmailAndPasswordAsync(rm.Email, rm.Passwoord);
