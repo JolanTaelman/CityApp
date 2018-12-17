@@ -15,7 +15,7 @@ namespace MvvmLight1.ViewModel
     /// </summary>
     public class ViewModelLocator
     {
-        public const string loginKey = "login";
+        public const string loginKey = "Login";
         public const string registerKey = "register";
         public const string homeKey = "home";
         public const string mainpageKey = "Mainpage";
@@ -55,6 +55,8 @@ namespace MvvmLight1.ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<LoginPageViewModel>();
             SimpleIoc.Default.Register<RegisterViewModel>();
+            
+
         }
 
         /// <summary>
@@ -63,8 +65,10 @@ namespace MvvmLight1.ViewModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
             "CA1822:MarkMembersAsStatic",
             Justification = "This non-static member is needed for data binding purposes.")]
+        
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
         public LoginPageViewModel LoginPageViewModel => ServiceLocator.Current.GetInstance<LoginPageViewModel>();
         public RegisterViewModel RegisterViewModel => ServiceLocator.Current.GetInstance<RegisterViewModel>();
+        
     }
 }

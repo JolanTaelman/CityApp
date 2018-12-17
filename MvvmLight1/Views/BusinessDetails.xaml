@@ -43,9 +43,9 @@
                                 <ColumnDefinition MinWidth="50"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Column="0" Text="{x:Bind Dag}"/>
-                            <TextBlock Grid.Column="1" Text="{x:Bind Openingsuren}"/>
-                            <TextBlock Grid.Column="2" Text="{x:Bind Sluitingsuren}"/>
+                            <TextBlock Grid.Column="0" Text="{Binding Dag}"/>
+                            <TextBlock Grid.Column="1" Text="{Binding Openingsuren}"/>
+                            <TextBlock Grid.Column="2" Text="{Binding Sluitingsuren}"/>
                         </Grid>
                     </DataTemplate>
                 </GridView.ItemTemplate>
