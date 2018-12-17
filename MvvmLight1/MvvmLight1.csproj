@@ -100,6 +100,9 @@
     <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="ViewModel\LoginPageViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
+    <Compile Include="Views\BusinessDetails.xaml.cs">
+      <DependentUpon>BusinessDetails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegistreerDialog.xaml.cs">
       <DependentUpon>RegistreerDialog.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\BusinessDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RegistreerDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

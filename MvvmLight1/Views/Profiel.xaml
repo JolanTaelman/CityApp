@@ -8,19 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.2*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-        </Grid.RowDefinitions>
-        <StackPanel>
-            <Ellipse Height="200" Width="200" Margin="0,50,0,0">
+    <Grid>
+        <Border BorderThickness="2" BorderBrush="Black" Height="auto" Width="auto">
+            <StackPanel HorizontalAlignment="Center" Height="648" VerticalAlignment="Center" Width="672" Background="#EEEEEE">
+                <Ellipse Height="200" Width="200" Margin="0,50,0,0">
                     <Ellipse.Fill>
                         <ImageBrush ImageSource="../Assets/trumpie.jpg"></ImageBrush>
                     </Ellipse.Fill>
@@ -29,8 +20,8 @@
                 <TextBlock x:Name="txtWoonplaats" Margin="0,20,0,0" Text="Waregem" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Stretch" FontFamily="Arial" FontSize="36"/>
                 <TextBlock x:Name="txtTelefoon" Margin="0,20,0,0" Text="0475/00.00.00" TextWrapping="Wrap" HorizontalAlignment="Center" FontFamily="Arial" FontSize="36"/>
                 <TextBlock x:Name="txtBedrijf" Margin="0,50,0,0" Text="Jolan Industries Inc." TextWrapping="Wrap" FontFamily="Arial" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" TextDecorations="Underline"/>
-        </StackPanel>
+                <Button x:Name="btnVoegBedrijfToe" Margin="0,20,0,0" Content="Bedrijf toevoegen" HorizontalAlignment="Center" Click="BtnVoegBedrijfToe_Clicked"/>
+            </StackPanel>
+        </Border>
     </Grid>
-
 </Page>
-
