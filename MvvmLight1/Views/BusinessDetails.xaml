@@ -8,14 +8,14 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400"
-    DataContext="">
+    DataContext="{Binding gekozenBusiness}">
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.4*"/>
             <ColumnDefinition Width="0.6*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="../Assets/homeCity.png"/>
+        <Image Source="../Assets/StoreLogo.png"/>
         <StackPanel Grid.Column="1" VerticalAlignment="Top" DataContext="{x:Bind gekozenBusiness}">
             <TextBlock Text="{x:Bind gekozenBusiness.Name}"
                    Margin="10,0,10,0"

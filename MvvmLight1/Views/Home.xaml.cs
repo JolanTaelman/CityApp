@@ -27,7 +27,9 @@ namespace MvvmLight1.Views
 
         ObservableCollection<String> categories = new ObservableCollection<String>();
         ObservableCollection<Business> businesses = new ObservableCollection<Business>();
-        
+
+        ObservableCollection<Business> filteredBusinesses { get; set; }
+
         public Home()
         {
             categories.Add("Restaurant");
@@ -36,7 +38,7 @@ namespace MvvmLight1.Views
             businesses.Add(new Business { Category = "Restaurant", Name = "Pizza Frank"});
             businesses.Add(new Business { Category = "Winkel", Name = "Okay Gent" });
             businesses.Add(new Business { Category = "Cafe", Name = "Cafe bob" });
-
+            filteredBusinesses = businesses;
             this.InitializeComponent();
         }
 
@@ -48,8 +50,7 @@ namespace MvvmLight1.Views
 
         public void Home_ItemClick(object sender, ItemClickEventArgs args)
         {
-
+           
         }
-
-    }
+        
 }
