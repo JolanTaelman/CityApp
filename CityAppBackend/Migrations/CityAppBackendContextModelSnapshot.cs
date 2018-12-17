@@ -65,10 +65,15 @@ namespace CityAppBackend.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
-
+                    b.Property<string>("Email");
+                    b.Property<string>("Adres1");
+                    b.Property<string>("Adres2");
+                    b.Property<string>("Staat");
+                    b.Property<string>("Postcode");
+                    b.Property<string>("Gemeente");
                     b.HasKey("UserId");
-
-                    b.ToTable("User");
+       
+        b.ToTable("User");
                 });
 
             modelBuilder.Entity("CityAppBackend.Models.Business", b =>
