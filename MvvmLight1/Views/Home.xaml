@@ -13,7 +13,7 @@
             
 
             <local:BusinessDetails MinHeight="400" MinWidth="500" x:Name="gekozenBusiness" Loaded="GekozenBusiness_Loaded"></local:BusinessDetails>
-            <ComboBox x:Name="cbCategorie" Header="Categorieën" Margin="50,50,0,0"  ItemsSource="{x:Bind categories}" PlaceholderText="Maak uw keuze" Width="200" SelectionChanged="ComboBox_SelectionChanged"/>
+            <ComboBox Name="cbCategorie" Header="Categorieën" Margin="50,50,0,0"  ItemsSource="{x:Bind categories}" PlaceholderText="Maak uw keuze" Width="200" SelectionChanged="ComboBox_SelectionChanged"/>
 
             <GridView Margin="50,50,0,0"  Header="businesses" ItemsSource="{x:Bind filteredBusinesses}"
                  ItemTemplate="{StaticResource BusinessItem}"

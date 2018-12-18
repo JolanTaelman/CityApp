@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -64,14 +65,15 @@ namespace MvvmLight1.Views
             string selectedItem = (String)cbCategorie.SelectedItem;
             
             // use filter method
-            filterBusiness(selectedItem);
+            filterBusiness(selectedItem,businesses.ToList());
         }
 
-        public IEnumerable<Business> filterBusiness(string categorie)
+        public IEnumerable<Business> filterBusiness(string categorie, List<Business> bisList)
         {
             filteredBusinesses.Clear();
             var b = new List<Business>();
-            b = businesses.Where(o => o.Category == categorie).ToList();
+            
+            b = bisList.Where(o => o.Category == categorie).ToList();
 
             if (categorie == "geen categorie")
             {
