@@ -24,33 +24,68 @@ namespace MvvmLight1.Views
     /// </summary>
     public sealed partial class Home : Page
     {
-
         ObservableCollection<String> categories = new ObservableCollection<String>();
         ObservableCollection<Business> businesses = new ObservableCollection<Business>();
 
         ObservableCollection<Business> filteredBusinesses { get; set; }
 
+       
+
         public Home()
         {
+            categories.Add("geen categorie");
             categories.Add("Restaurant");
             categories.Add("Winkel");
             categories.Add("Cafe");
-            businesses.Add(new Business { Category = "Restaurant", Name = "Pizza Frank"});
+            businesses.Add(new Business { Category = "Restaurant", Name = "Pizza Frank" });
             businesses.Add(new Business { Category = "Winkel", Name = "Okay Gent" });
             businesses.Add(new Business { Category = "Cafe", Name = "Cafe bob" });
             filteredBusinesses = businesses;
             this.InitializeComponent();
         }
 
-        public void Home_SelectionChanged(object sender, SelectionChangedEventArgs args)
-        {
-
-        }
-
 
         public void Home_ItemClick(object sender, ItemClickEventArgs args)
         {
-           
+
         }
-        
+
+        private void GekozenBusiness_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Get instance of Combobox
+            ComboBox cb = sender as ComboBox;
+
+            // Get selected item of Combobox
+            string selectedItem = (String)cbCategorie.SelectedItem;
+            
+            // use filter method
+            filterBusiness(selectedItem);
+        }
+
+        public IEnumerable<Business> filterBusiness(string categorie)
+        {
+            filteredBusinesses.Clear();
+            var b = new List<Business>();
+            b = businesses.Where(o => o.Category == categorie).ToList();
+
+            if (categorie == "geen categorie")
+            {
+                return businesses;
+            }
+            else
+            {
+                if (b.Count() > 0)
+                {
+                    b.ForEach(bus => filteredBusinesses.Add(bus));
+                }
+            }
+
+            return filteredBusinesses;
+        }
+    }
 }
