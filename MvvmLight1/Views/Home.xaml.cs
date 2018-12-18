@@ -26,11 +26,9 @@ namespace MvvmLight1.Views
     public sealed partial class Home : Page
     {
         ObservableCollection<String> categories = new ObservableCollection<String>();
-        ObservableCollection<Business> businesses = new ObservableCollection<Business>();
+        ObservableCollection<Business> ondernemingen = new ObservableCollection<Business>();
 
-        ObservableCollection<Business> filteredBusinesses { get; set; }
-
-       
+        ObservableCollection<Business> filteredBusinesses = new ObservableCollection<Business>();
 
         public Home()
         {
@@ -38,46 +36,47 @@ namespace MvvmLight1.Views
             categories.Add("Restaurant");
             categories.Add("Winkel");
             categories.Add("Cafe");
-            businesses.Add(new Business { Category = "Restaurant", Name = "Pizza Frank" });
-            businesses.Add(new Business { Category = "Winkel", Name = "Okay Gent" });
-            businesses.Add(new Business { Category = "Cafe", Name = "Cafe bob" });
-            filteredBusinesses = businesses;
+            ondernemingen.Add(new Business { Category = "Restaurant", Name = "Pizza Frank" });
+            ondernemingen.Add(new Business { Category = "Winkel", Name = "Okay Gent" });
+            ondernemingen.Add(new Business { Category = "Cafe", Name = "Cafe bob" });
+            filteredBusinesses.Add(new Business { Category = "Restaurant", Name = "Pizza Frank" });
+            filteredBusinesses.Add(new Business { Category = "Winkel", Name = "Okay Gent" });
+            filteredBusinesses.Add(new Business { Category = "Cafe", Name = "Cafe bob" });
             this.InitializeComponent();
         }
 
 
         public void Home_ItemClick(object sender, ItemClickEventArgs args)
         {
-
+            gekozenBusiness.Name = "Arno";
         }
 
         private void GekozenBusiness_Loaded(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Get instance of Combobox
-            ComboBox cb = sender as ComboBox;
 
             // Get selected item of Combobox
             string selectedItem = (String)cbCategorie.SelectedItem;
             
             // use filter method
-            filterBusiness(selectedItem,businesses.ToList());
+            FilterBusiness(selectedItem);
         }
 
-        public IEnumerable<Business> filterBusiness(string categorie, List<Business> bisList)
+        public void FilterBusiness(string categorie)
         {
             filteredBusinesses.Clear();
             var b = new List<Business>();
-            
-            b = bisList.Where(o => o.Category == categorie).ToList();
+            b = ondernemingen.Where(o => o.Category == categorie).ToList();
 
             if (categorie == "geen categorie")
             {
-                return businesses;
+                filteredBusinesses.Add(new Business { Category = "Restaurant", Name = "Pizza Frank" });
+                filteredBusinesses.Add(new Business { Category = "Winkel", Name = "Okay Gent" });
+                filteredBusinesses.Add(new Business { Category = "Cafe", Name = "Cafe bob" });
             }
             else
             {
@@ -86,8 +85,6 @@ namespace MvvmLight1.Views
                     b.ForEach(bus => filteredBusinesses.Add(bus));
                 }
             }
-
-            return filteredBusinesses;
         }
     }
 }

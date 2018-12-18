@@ -34,7 +34,7 @@ namespace MvvmLight1.Views
 
         private void BtnVoegBedrijfToe_Clicked(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(RegistreerBusiness));
         }
     }
 }
